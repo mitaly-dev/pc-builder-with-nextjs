@@ -1,4 +1,5 @@
 import { Card } from "antd";
+import Image from "next/image";
 import Link from "next/link";
 
 const Categories = ({ categories }) => {
@@ -19,8 +20,17 @@ const Categories = ({ categories }) => {
             >
               <Link
                 href={`${category?.category}`}
-                className="text-gray-700 font-semibold group-hover:text-white "
+                className="text-gray-700 font-semibold group-hover:text-white flex flex-col"
               >
+                <div>
+                  <Image
+                    src={category.icon}
+                    width={50}
+                    height={50}
+                    alt="image"
+                    className="rounded-lg"
+                  ></Image>
+                </div>
                 {category?.title}
               </Link>
             </Card>

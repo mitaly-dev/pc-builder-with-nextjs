@@ -10,9 +10,9 @@ const { Header, Content, Footer } = Layout;
 
 const Navbar = () => {
   const { data: session } = useSession();
-  const selectedCategories = useSelector(
-    (state) => state.pcBuilder.selectedCategories
-  );
+  //   const selectedCategories = useSelector(
+  //     (state) => state.pcBuilder.selectedCategories
+  //   );
 
   const {
     token: { colorBgContainer },
