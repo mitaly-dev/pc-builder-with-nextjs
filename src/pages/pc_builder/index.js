@@ -15,16 +15,21 @@ const PC_Builder = ({ categories }) => {
                 <Image
                   alt="product image"
                   src={`${category?.icon}`}
-                  width={20}
-                  height={20}
+                  width={30}
+                  height={30}
                   layout="responsive"
                 />
               </div>
               <div>
-                <p>{category.title}</p>
+                <p className="text-[15px] font-semibold text-gray-500">
+                  {category.title}{" "}
+                  <button className="bg-gray-200 rounded-md border-none text-[12px] ml-2 p-1">
+                    Required
+                  </button>
+                </p>
               </div>
             </div>
-            <button className="border-2 border-[#0d053b] bg-slate-50 rounded-md px-5 py-2 ">
+            <button className="border-2 border-[#0d053b] bg-slate-50 hover:bg-[#887ccf49] cursor-pointer rounded-md px-5 py-2 ">
               <Link
                 href={`/pc_builder/${category?.category}`}
                 className="text-[14px] font-semibold text-[#0d053b]"
