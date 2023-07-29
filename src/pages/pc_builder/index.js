@@ -24,14 +24,14 @@ const PC_Builder = ({ categories }) => {
                 <p>{category.title}</p>
               </div>
             </div>
-            <div>
+            <button className="border-2 border-[#0d053b] bg-slate-50 rounded-md px-5 py-2 ">
               <Link
                 href={`/pc_builder/${category?.category}`}
-                className="border rounded-lg"
+                className="text-[14px] font-semibold text-[#0d053b]"
               >
                 Choose
               </Link>
-            </div>
+            </button>
           </div>
         );
       })}
