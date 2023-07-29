@@ -34,7 +34,9 @@ const ProductCard = ({ product }) => {
         }
       >
         <div>
-          <span className="font-bold text-red-600 capitalize">{category}</span>
+          <span className="font-bold text-red-600 capitalize">
+            {category === "cpu-processor" ? "cpu/processor" : category}
+          </span>
           <h3 className="font-semibold">{productName}</h3>
           <ul>
             {description?.map((data, index) => {

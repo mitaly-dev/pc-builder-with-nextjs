@@ -14,7 +14,7 @@ const RootLayout = ({ children }) => {
   const items = [
     {
       key: "1",
-      label: <Link href="https://www.antgroup.com">CPU / Processor</Link>,
+      label: <Link href="/cpu-processor">CPU / Processor</Link>,
     },
     {
       key: "2",
@@ -22,29 +22,19 @@ const RootLayout = ({ children }) => {
     },
     {
       key: "3",
-      label: <Link href="https://www.luohanacademy.com">RAM</Link>,
+      label: <Link href="/ram">RAM</Link>,
     },
     {
       key: "4",
-      label: (
-        <Link href="https://www.luohanacademy.com">Power Supply Unit</Link>
-      ),
+      label: <Link href="/power_supply_unit">Power Supply Unit</Link>,
     },
     {
       key: "5",
-      label: <Link href="https://www.luohanacademy.com">Storage Device</Link>,
+      label: <Link href="/storage-device">Storage Device</Link>,
     },
     {
       key: "6",
-      label: <Link href="https://www.luohanacademy.com">Monitor</Link>,
-    },
-    {
-      key: "7",
-      label: <Link href="https://www.luohanacademy.com">Keyboard</Link>,
-    },
-    {
-      key: "8",
-      label: <Link href="https://www.luohanacademy.com">Mouse</Link>,
+      label: <Link href="/monitor">Monitor</Link>,
     },
   ];
   return (

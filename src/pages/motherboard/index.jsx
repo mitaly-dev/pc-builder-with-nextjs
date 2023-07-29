@@ -1,6 +1,5 @@
 import ProductCard from "@/components/ProductCard";
 import RootLayout from "@/components/layout/RootLayout";
-import React from "react";
 
 const Motherboard = ({ motherboard }) => {
   return (
