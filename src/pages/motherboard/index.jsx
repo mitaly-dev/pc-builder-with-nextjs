@@ -16,9 +16,9 @@ const Motherboard = ({ motherboard }) => {
 
 export default Motherboard;
 
-Motherboard.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// Motherboard.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

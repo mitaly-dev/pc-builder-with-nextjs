@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 
 const contentStyle = {
   height: "70vh",

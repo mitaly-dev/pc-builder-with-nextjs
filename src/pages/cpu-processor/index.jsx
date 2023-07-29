@@ -16,9 +16,9 @@ const CpuProcessor = ({ cpuProcessor }) => {
 
 export default CpuProcessor;
 
-CpuProcessor.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// CpuProcessor.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

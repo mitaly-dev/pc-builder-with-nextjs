@@ -1,6 +1,6 @@
 import connectToDB from "./mongodb";
 
-export default async function handler(req, res) {
+export default async function featuredHandler(req, res) {
   try {
     const client = await connectToDB();
     const db = client.db();
@@ -10,23 +10,14 @@ export default async function handler(req, res) {
 
     if (req.method === "GET") {
       const motherboard = await producdtsCollection
-        .find({ category })
+        .find({ featured: true })
         .toArray();
       res.send({
         status: "200",
-        message: `Successfully retrived ${category} products`,
+        message: `Successfully retrived featured products`,
         data: motherboard,
       });
     }
-
-    // if (req.method === "GET") {
-    //   const motherboard = await producdtsCollection.find({}).toArray();
-    //   res.send({
-    //     status: "200",
-    //     message: `Successfully retrived all products`,
-    //     data: motherboard,
-    //   });
-    // }
   } catch (error) {
     return res.status(500).json({ message: "Internal Server Error" });
   }

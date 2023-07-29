@@ -16,9 +16,9 @@ const StorageDevice = ({ storage_device }) => {
 
 export default StorageDevice;
 
-StorageDevice.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// StorageDevice.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

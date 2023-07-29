@@ -16,9 +16,9 @@ const PowerSupplyUnit = ({ power_supply_unit }) => {
 
 export default PowerSupplyUnit;
 
-PowerSupplyUnit.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// PowerSupplyUnit.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

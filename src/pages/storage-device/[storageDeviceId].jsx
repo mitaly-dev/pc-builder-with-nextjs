@@ -1,7 +1,11 @@
-import React from "react";
+import RootLayout from "@/components/layout/RootLayout";
 
-const storageDeviceId = () => {
+const StorageDeviceId = () => {
   return <div>storageDeviceId</div>;
 };
 
-export default storageDeviceId;
+export default StorageDeviceId;
+
+// StorageDeviceId.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };

@@ -16,9 +16,9 @@ const Ram = ({ ram }) => {
 
 export default Ram;
 
-Ram.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// Ram.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
 
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:3000/api/products?category=ram");

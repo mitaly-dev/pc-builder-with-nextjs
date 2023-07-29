@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
-import Banner from "../Banner";
 import { useSession, signOut, SessionProvider } from "next-auth/react";
 import { useDispatch, useSelector } from "react-redux";
 
 const { Header, Content, Footer } = Layout;
 
-const RootLayout = ({ children }) => {
+const Navbar = () => {
+  const { data: session } = useSession();
   const selectedCategories = useSelector(
     (state) => state.pcBuilder.selectedCategories
   );
@@ -52,26 +52,6 @@ const RootLayout = ({ children }) => {
             TN Tech
           </Link>
           <div className="flex gap-4 items-center">
-            {session ? (
-              <items>
-                <Button
-                  onClick={() =>
-                    signOut({ callbackUrl: "http://localhost:3000/login" })
-                  }
-                  type="primary"
-                  danger
-                >
-                  Logout
-                </Button>
-              </items>
-            ) : (
-              <Link
-                style={{ textDecoration: "none", color: "white" }}
-                href="/login"
-              >
-                <items>Login</items>
-              </Link>
-            )}
             <Dropdown
               menu={{
                 items,
@@ -93,23 +73,33 @@ const RootLayout = ({ children }) => {
                 PC Builder
               </Link>
             </Button>
+            {session ? (
+              <items>
+                <Button
+                  onClick={() =>
+                    signOut({ callbackUrl: "http://localhost:3000/login" })
+                  }
+                  type="primary"
+                  danger
+                >
+                  Logout
+                </Button>
+              </items>
+            ) : (
+              <button className="border px-6 py-2 hover:bg-slate-600 rounded-md bg-black text-white border-white cursor-pointer">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="/login"
+                >
+                  Login
+                </Link>
+              </button>
+            )}
           </div>
         </div>
       </Header>
-      <Content style={{ minHeight: "100vh", backgroundColor: "#f7f7f7" }}>
-        {children}
-      </Content>
-      <Footer
-        style={{
-          textAlign: "center",
-          backgroundColor: "black",
-          color: "white",
-        }}
-      >
-        TN Tech ©2023 Created by mitaly
-      </Footer>
     </Layout>
   );
 };
 
-export default RootLayout;
+export default Navbar;

@@ -16,9 +16,9 @@ const Monitor = ({ monitor }) => {
 
 export default Monitor;
 
-Monitor.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// Monitor.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
 
 export const getStaticProps = async () => {
   const res = await fetch(
