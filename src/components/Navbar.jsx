@@ -14,7 +14,6 @@ const Navbar = () => {
     (state) => state.pcBuilder.selectedCategories
   );
 
-  console.log("sew", selectedCategories);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -46,7 +45,13 @@ const Navbar = () => {
   ];
   return (
     <Layout className="layout">
-      <Header style={{ display: "flex", alignItems: "center" }}>
+      <Header
+        style={{
+          display: "flex",
+          alignItems: "center",
+          backgroundColor: "#0d053b",
+        }}
+      >
         <div className="flex justify-between w-full items-center">
           <Link href="/" className="text-red-600 border border-white text-2xl">
             TN Tech

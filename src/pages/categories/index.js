@@ -1,3 +1,4 @@
+import { Card } from "antd";
 import Link from "next/link";
 
 const Categories = ({ categories }) => {
@@ -10,13 +11,19 @@ const Categories = ({ categories }) => {
       <div className="grid grid-cols-6 gap-4">
         {categories?.map((category, index) => {
           return (
-            <Link
-              href={`${category?.category}`}
+            <Card
               key={index}
-              className=" rounded-md px-10 py-10 bg-white shadow-md hover:shadow-xl text-center text-black"
+              hoverable
+              style={{ width: "100%" }}
+              className="shadow-lg rounded-md py-5 bg-white hover:bg-[#0d053b] duration-500 text-center group "
             >
-              {category?.title}
-            </Link>
+              <Link
+                href={`${category?.category}`}
+                className="text-gray-700 font-semibold group-hover:text-white "
+              >
+                {category?.title}
+              </Link>
+            </Card>
           );
         })}
       </div>

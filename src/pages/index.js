@@ -6,7 +6,7 @@ import { useSession } from "next-auth/react";
 
 const Home = ({ categories, featured }) => {
   const { data: session } = useSession();
-  console.log("data", session);
+
   return (
     <div>
       <Banner />

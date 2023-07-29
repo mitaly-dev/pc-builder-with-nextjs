@@ -19,20 +19,15 @@ const ProductCard = ({ product }) => {
     _id,
   } = product;
   return (
-    <Link href={`/${category}/${_id}`}>
-      <Card
-        hoverable
-        style={{ width: "100%" }}
-        cover={
-          <Image
-            src={image}
-            alt={`${productName}`}
-            width={100}
-            height={100}
-            layout="responsive"
-          />
-        }
-      >
+    <Card hoverable style={{ width: "100%" }}>
+      <Link href={`/${category}/${_id}`} className="text-black">
+        <Image
+          src={image}
+          alt={`${productName}`}
+          width={100}
+          height={100}
+          layout="responsive"
+        />
         <div>
           <span className="font-bold text-red-600 capitalize">
             {category === "cpu-processor" ? "cpu/processor" : category}
@@ -54,8 +49,8 @@ const ProductCard = ({ product }) => {
           Price :{" "}
           <span className="text-red-600 text-xl font-semibold">{price}৳</span>
         </h3>
-      </Card>
-    </Link>
+      </Link>
+    </Card>
   );
 };
 
