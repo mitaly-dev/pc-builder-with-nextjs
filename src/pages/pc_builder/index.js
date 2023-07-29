@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PC_Builder = ({ categories }) => {
+  //   const selectedCategories = useSelector(
+  //     (state) => state.pcBuilder.selectedCategories
+  //   );
   return (
     <div className="py-3 sm:py-10 px-5 sm:px-10 md:px-20">
       {categories?.map((category) => {

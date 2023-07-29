@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Category = ({ category }) => {
-  console.log("category", category);
+  const router = useRouter();
+  const addToPCBuilder = () => {
+    router.push("/pc_builder");
+  };
   return (
     <div className="py-3 sm:py-10 px-5 sm:px-10 md:px-20">
       {category?.map((product) => {
@@ -50,13 +54,11 @@ const Category = ({ category }) => {
               <span className="text-red-600 text-xl font-semibold">
                 {price}৳
               </span>
-              <button className=" bg-[#1b0a7e] hover:bg-[#361b80] cursor-pointer rounded-md px-10 py-3 ">
-                <Link
-                  href={`/pc_builder`}
-                  className="text-[14px] font-semibold text-white"
-                >
-                  Add
-                </Link>
+              <button
+                onClick={addToPCBuilder}
+                className=" bg-[#1b0a7e] hover:bg-[#361b80] cursor-pointer rounded-md px-10 py-3 text-[14px] font-semibold text-white"
+              >
+                Add
               </button>
             </div>
           </div>

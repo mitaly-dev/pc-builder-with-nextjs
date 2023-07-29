@@ -16,6 +16,7 @@ const ProductCard = ({ product }) => {
     individualRating,
     averageRating,
     reviews,
+    categoryName,
     _id,
   } = product;
   return (
@@ -30,7 +31,7 @@ const ProductCard = ({ product }) => {
         />
         <div>
           <span className="font-bold text-red-600 capitalize">
-            {category === "cpu-processor" ? "cpu/processor" : category}
+            {categoryName}
           </span>
           <h3 className="font-semibold">{productName}</h3>
           <ul>
