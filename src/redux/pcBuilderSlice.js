@@ -9,6 +9,7 @@ const pcBuilderSlice = createSlice({
   initialState,
   reducers: {
     addComponentForPCBuilder: (state, action) => {
+      console.log("action.payload", action.payload);
       state.selectedCategories = [...state.selectedCategories, action.payload];
     },
   },

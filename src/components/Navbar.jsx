@@ -10,9 +10,6 @@ const { Header, Content, Footer } = Layout;
 
 const Navbar = () => {
   const { data: session } = useSession();
-  //   const selectedCategories = useSelector(
-  //     (state) => state.pcBuilder.selectedCategories
-  //   );
 
   const {
     token: { colorBgContainer },
@@ -71,13 +68,15 @@ const Navbar = () => {
                   <DownOutlined />
                 </Space>
               </a>
-            </Dropdown>
-            <Button>
-              {" "}
-              <Link href="/pc_builder" className="bg-white">
+            </Dropdown>{" "}
+            <items>
+              <Link
+                href="/pc_builder"
+                className="bg-blue-800 px-3 py-3 rounded-md text-white font-semibold"
+              >
                 PC Builder
               </Link>
-            </Button>
+            </items>
             {session ? (
               <items>
                 <Button
@@ -91,14 +90,15 @@ const Navbar = () => {
                 </Button>
               </items>
             ) : (
-              <button className="border px-6 py-2 hover:bg-slate-600 rounded-md bg-black text-white border-white cursor-pointer">
+              <items>
                 <Link
                   style={{ textDecoration: "none", color: "white" }}
                   href="/login"
+                  className="bg-gray-600 px-3 py-3 rounded-md text-white font-semibold"
                 >
                   Login
                 </Link>
-              </button>
+              </items>
             )}
           </div>
         </div>

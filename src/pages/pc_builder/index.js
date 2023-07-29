@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const PC_Builder = ({ categories }) => {
-  //   const selectedCategories = useSelector(
-  //     (state) => state.pcBuilder.selectedCategories
-  //   );
+  const { selectedCategories } = useSelector((state) => state.pcBuilder);
+
+  console.log("selectedCategories", selectedCategories);
   return (
     <div className="py-3 sm:py-10 px-5 sm:px-10 md:px-20">
       {categories?.map((category) => {
@@ -32,14 +33,12 @@ const PC_Builder = ({ categories }) => {
                 </p>
               </div>
             </div>
-            <button className="border-2 border-[#0d053b] bg-slate-50 hover:bg-[#887ccf49] cursor-pointer rounded-md px-5 py-2 ">
-              <Link
-                href={`/pc_builder/${category?.category}`}
-                className="text-[14px] font-semibold text-[#0d053b]"
-              >
-                Choose
-              </Link>
-            </button>
+            <Link
+              href={`/pc_builder/${category?.category}`}
+              className="text-[14px] font-semibold text-whtie px-5 py-3 rounded-lg bg-gray-700 text-white"
+            >
+              Choose
+            </Link>
           </div>
         );
       })}

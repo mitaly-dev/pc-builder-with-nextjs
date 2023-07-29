@@ -1,13 +1,19 @@
+import { addComponentForPCBuilder } from "@/redux/pcBuilderSlice";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 const Category = ({ category }) => {
   const router = useRouter();
-  const addToPCBuilder = () => {
+  const dispatch = useDispatch();
+
+  const addToPCBuilder = (categoryName) => {
+    dispatch(addComponentForPCBuilder(categoryName));
     router.push("/pc_builder");
   };
+
   return (
     <div className="py-3 sm:py-10 px-5 sm:px-10 md:px-20">
       {category?.map((product) => {
@@ -23,6 +29,7 @@ const Category = ({ category }) => {
           averageRating,
           reviews,
           _id,
+          categoryName,
         } = product;
         return (
           <div
@@ -55,7 +62,7 @@ const Category = ({ category }) => {
                 {price}৳
               </span>
               <button
-                onClick={addToPCBuilder}
+                onClick={() => addToPCBuilder(categoryName)}
                 className=" bg-[#1b0a7e] hover:bg-[#361b80] cursor-pointer rounded-md px-10 py-3 text-[14px] font-semibold text-white"
               >
                 Add
