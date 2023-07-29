@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
+import Banner from "../Banner";
 
 const { Header, Content, Footer } = Layout;
 
@@ -78,9 +79,7 @@ const RootLayout = ({ children }) => {
           </div>
         </div>
       </Header>
-      <Content style={{ padding: "0 50px", minHeight: "100vh" }}>
-        {children}
-      </Content>
+      <Content style={{ minHeight: "100vh" }}>{children}</Content>
       <Footer style={{ textAlign: "center" }}>
         Ant Design ©2023 Created by Ant UED
       </Footer>
