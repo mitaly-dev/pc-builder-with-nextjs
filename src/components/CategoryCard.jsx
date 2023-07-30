@@ -18,7 +18,6 @@ const CategoryCard = ({ category }) => {
             src={`${category?.icon}`}
             width={30}
             height={30}
-            layout="responsive"
           />
         </div>
         <div>
@@ -30,12 +29,12 @@ const CategoryCard = ({ category }) => {
           </div>
           {categoryProduct && (
             <div>
-              <div className="w-10 h-10 ">
+              <div className="w-20 h-20 ">
                 <Image
                   alt="product image"
                   src={`${categoryProduct?.image}`}
-                  width={10}
-                  height={10}
+                  width={50}
+                  height={50}
                   layout="responsive"
                 />
               </div>

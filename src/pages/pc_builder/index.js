@@ -49,7 +49,7 @@ const PC_Builder = ({ categories }) => {
 export default PC_Builder;
 
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:3000/api/categories");
+  const res = await fetch(`${process.env.URL}/api/categories`);
   const categoriesData = await res.json();
 
   return {

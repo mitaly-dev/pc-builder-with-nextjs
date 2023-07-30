@@ -17,7 +17,7 @@ export default StorageDevice;
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "http://localhost:3000/api/products?category=storage-device"
+    `${process.env.URL}/api/products?category=storage-device`
   );
   const data = await res.json();
   return {

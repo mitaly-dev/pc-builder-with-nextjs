@@ -33,13 +33,7 @@ const ProductCard = ({ product }) => {
         }}
         className="text-black"
       >
-        <Image
-          src={image}
-          alt={`${productName}`}
-          width={100}
-          height={100}
-          layout="responsive"
-        />
+        <Image src={image} alt={`${productName}`} width={200} height={200} />
         <div>
           <span className="font-bold text-red-600 capitalize">
             {categoryName}

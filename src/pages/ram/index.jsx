@@ -16,7 +16,7 @@ const Ram = ({ ram }) => {
 export default Ram;
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/products?category=ram");
+  const res = await fetch(`${process.env.URL}/api/products?category=ram`);
   const data = await res.json();
   return {
     props: {

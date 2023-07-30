@@ -17,7 +17,7 @@ export default PowerSupplyUnit;
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "http://localhost:3000/api/products?category=power_supply_unit"
+    `${process.env.URL}/api/products?category=power_supply_unit`
   );
   const data = await res.json();
   return {

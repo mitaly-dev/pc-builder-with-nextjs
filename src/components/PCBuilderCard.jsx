@@ -31,14 +31,13 @@ const PCBuilderCard = ({ product }) => {
 
   return (
     <div className="px-3 py-3 sm:px-5 sm:py-4 flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-20 mb-10 justify-between items-center border shadow-md rounded-md max-w-5xl m-auto p-5 ">
-      <div className="flex gap-10 items-start overflow-hidden">
+      <div className="flex flex-col sm:flex-row gap-10 items-start overflow-hidden">
         <div className="w-48 h-48">
           <Image
             alt="product image"
             src={`${image}`}
-            width={100}
-            height={100}
-            layout="responsive"
+            width={150}
+            height={150}
           />
         </div>
         <div>

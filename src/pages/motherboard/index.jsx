@@ -17,7 +17,7 @@ export default Motherboard;
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "http://localhost:3000/api/products?category=motherboard"
+    `${process.env.URL}/api/products?category=motherboard`
   );
   const data = await res.json();
   return {

@@ -1,4 +1,4 @@
-import ProductDetails from "../productDetails";
+import ProductDetails from "../../components/productDetails";
 
 const RamId = ({ product }) => {
   return (
@@ -11,7 +11,7 @@ const RamId = ({ product }) => {
 export default RamId;
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/products?category=ram");
+  const res = await fetch(`${process.env.URL}/api/products?category=ram`);
   const data = await res.json();
   const paths = data?.data?.map((product) => ({
     params: {
@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/category-product?id=${params?.ramId}`
+    `${process.env.URL}/api/category-product?id=${params?.ramId}`
   );
   const data = await res.json();
 

@@ -1,4 +1,4 @@
-import ProductDetails from "../productDetails";
+import ProductDetails from "../../components/productDetails";
 
 const CpuProcessorId = ({ product }) => {
   return (
@@ -12,7 +12,7 @@ export default CpuProcessorId;
 
 export const getStaticPaths = async () => {
   const res = await fetch(
-    "http://localhost:3000/api/products?category=cpu-processor"
+    `${process.env.URL}/api/products?category=cpuProcessor`
   );
   const data = await res.json();
   const paths = data?.data?.map((product) => ({
@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/category-product?id=${params?.cpuProcessorId}`
+    `${process.env.URL}/api/category-product?id=${params?.cpuProcessorId}`
   );
   const data = await res.json();
 
