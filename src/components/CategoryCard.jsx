@@ -30,6 +30,15 @@ const CategoryCard = ({ category }) => {
           </p>
           {categoryProduct && (
             <div>
+              <div className="w-10 h-10 ">
+                <Image
+                  alt="product image"
+                  src={`${categoryProduct?.image}`}
+                  width={10}
+                  height={10}
+                  layout="responsive"
+                />
+              </div>
               <h3 className="text-sm text-gray-500">
                 {categoryProduct?.productName}
               </h3>
