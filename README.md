@@ -1,7 +1,8 @@
+##TN TECH
 ## Live Link:
 https://pc-builder-omega-ten.vercel.app/
 
-## github Link: 
+## Github Link: 
 https://github.com/mitaly-dev/pc-builder-with-nextjs
 
 ## About Project 
