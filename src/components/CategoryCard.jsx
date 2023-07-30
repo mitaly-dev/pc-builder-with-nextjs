@@ -9,10 +9,8 @@ const CategoryCard = ({ category }) => {
     (data) => data?.categoryName === category?.title
   );
 
-  console.log("categoryProduct", categoryProduct);
-
   return (
-    <div className="flex mb-10 justify-between items-center border shadow-md rounded-md max-w-3xl m-auto p-5 ">
+    <div className="flex mb-10 justify-between items-center border shadow-md rounded-md  m-auto p-5 ">
       <div className="flex gap-5 items-start">
         <div className="w-10 h-10">
           <Image

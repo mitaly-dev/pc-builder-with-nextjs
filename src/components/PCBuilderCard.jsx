@@ -65,7 +65,7 @@ const PCBuilderCard = ({ product }) => {
           onClick={() => addToPCBuilder(product)}
           className=" bg-[#1b0a7e] hover:bg-[#361b80] cursor-pointer rounded-md px-10 py-3 text-[14px] font-semibold text-white"
         >
-          Add
+          Add To Builder
         </button>
       </div>
     </div>
