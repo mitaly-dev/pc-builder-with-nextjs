@@ -17,7 +17,7 @@ export default CpuProcessor;
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "http://localhost:3000/api/products?category=cpu-processor"
+    "http://localhost:3000/api/products?category=cpuProcessor"
   );
   const data = await res.json();
   return {

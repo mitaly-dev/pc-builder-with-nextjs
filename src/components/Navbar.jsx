@@ -14,7 +14,7 @@ const Navbar = () => {
   const items = [
     {
       key: "1",
-      label: <Link href="/cpu-processor">CPU / Processor</Link>,
+      label: <Link href="cpuProcessor">CPU / Processor</Link>,
     },
     {
       key: "2",
