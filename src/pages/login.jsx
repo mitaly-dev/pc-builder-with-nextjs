@@ -2,16 +2,12 @@ import { GoogleOutlined, GithubOutlined } from "@ant-design/icons";
 import Head from "next/head";
 import styles from "../styles/Login.module.css";
 import { signIn } from "next-auth/react";
-import RootLayout from "@/components/layout/RootLayout";
 
 const Login = () => {
   return (
-    <div>
-      <Head>
-        <title>Next Login</title>
-      </Head>
+    <div className="py-3 sm:py-10 px-5 sm:px-10 md:px-20 w-full md:w-[70%] lg:w-[50%] m-auto">
       <div className={styles.form}>
-        <h3>LOGIN</h3>
+        <h3>LOGIN WITH GITHUB</h3>
         <div
           className={`${styles.social_icons} flex items-center justify-center`}
         >
@@ -27,6 +23,3 @@ const Login = () => {
 };
 
 export default Login;
-// Login.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };

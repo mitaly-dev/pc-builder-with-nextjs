@@ -1,6 +1,6 @@
 import ProductDetails from "../productDetails";
 
-const MotherboardId = ({ product }) => {
+const CpuProcessorId = ({ product }) => {
   console.log("product", product);
   return (
     <div>
@@ -9,16 +9,16 @@ const MotherboardId = ({ product }) => {
   );
 };
 
-export default MotherboardId;
+export default CpuProcessorId;
 
 export const getStaticPaths = async () => {
   const res = await fetch(
-    "http://localhost:3000/api/products?category=motherboard"
+    "http://localhost:3000/api/products?category=cpu-processor"
   );
   const data = await res.json();
   const paths = data?.data?.map((product) => ({
     params: {
-      motherboardId: product?._id,
+      cpuProcessorId: product?._id,
     },
   }));
   return { paths, fallback: false };
@@ -26,7 +26,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/category-product?id=${params?.motherboardId}`
+    `http://localhost:3000/api/category-product?id=${params?.cpuProcessorId}`
   );
   const data = await res.json();
 

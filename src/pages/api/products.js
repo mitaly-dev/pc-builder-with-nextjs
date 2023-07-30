@@ -18,15 +18,6 @@ export default async function handler(req, res) {
         data: motherboard,
       });
     }
-
-    // if (req.method === "GET") {
-    //   const motherboard = await producdtsCollection.find({}).toArray();
-    //   res.send({
-    //     status: "200",
-    //     message: `Successfully retrived all products`,
-    //     data: motherboard,
-    //   });
-    // }
   } catch (error) {
     return res.status(500).json({ message: "Internal Server Error" });
   }

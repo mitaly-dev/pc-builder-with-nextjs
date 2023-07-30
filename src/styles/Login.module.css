@@ -1,5 +1,4 @@
 .form {
-  width: 30%;
   height: 350px;
   border-radius: 10px;
   background: #090928;
@@ -7,6 +6,10 @@
   padding: 20px;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form form {

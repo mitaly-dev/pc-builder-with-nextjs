@@ -9,7 +9,7 @@ const Categories = ({ categories }) => {
         <h3>Featured Category</h3>
         <p className="p-0"> Get Your Desired Product from Featured Category!</p>
       </div>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
         {categories?.map((category, index) => {
           return (
             <Card

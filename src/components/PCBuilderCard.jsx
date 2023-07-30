@@ -20,7 +20,7 @@ const PCBuilderCard = ({ product }) => {
     _id,
     categoryName,
   } = product;
-  const { selectedCategories } = useSelector((state) => state.pcBuilder);
+
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -30,9 +30,9 @@ const PCBuilderCard = ({ product }) => {
   };
 
   return (
-    <div className="flex  gap-20 mb-10 justify-between items-center border shadow-md rounded-md max-w-5xl m-auto p-5 ">
-      <div className="flex gap-10 items-start">
-        <div className="w-48 h-4w-48">
+    <div className="px-3 py-3 sm:px-5 sm:py-4 flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-20 mb-10 justify-between items-center border shadow-md rounded-md max-w-5xl m-auto p-5 ">
+      <div className="flex gap-10 items-start overflow-hidden">
+        <div className="w-48 h-48">
           <Image
             alt="product image"
             src={`${image}`}
@@ -53,6 +53,9 @@ const PCBuilderCard = ({ product }) => {
               return <li key={index}>{data}</li>;
             })}
           </ul>
+          <p>
+            Status <span className="font-semibold"> : {status}</span>
+          </p>
           <p className="font-semibold">
             Rating <span className="text-blue-600"> : {individualRating}</span>{" "}
             <StarTwoTone />

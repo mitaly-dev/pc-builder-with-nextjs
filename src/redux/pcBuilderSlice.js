@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  selectedCategories: ["iam"],
+  selectedCategories: [],
+  category: "",
 };
 
 const pcBuilderSlice = createSlice({
@@ -9,12 +10,15 @@ const pcBuilderSlice = createSlice({
   initialState,
   reducers: {
     addComponentForPCBuilder: (state, action) => {
-      console.log("action.payload", action.payload);
       state.selectedCategories = [...state.selectedCategories, action.payload];
+    },
+    selectCategory: (state, action) => {
+      state.category = action.payload;
     },
   },
 });
 
-export const { addComponentForPCBuilder } = pcBuilderSlice.actions;
+export const { addComponentForPCBuilder, selectCategory } =
+  pcBuilderSlice.actions;
 
 export default pcBuilderSlice.reducer;

@@ -1,8 +1,11 @@
+import { selectCategory } from "@/redux/pcBuilderSlice";
 import { StarTwoTone } from "@ant-design/icons";
 import { Card } from "antd";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 const ProductCard = ({ product }) => {
   const {
@@ -19,9 +22,24 @@ const ProductCard = ({ product }) => {
     categoryName,
     _id,
   } = product;
+  const router = useRouter();
+  const dispatch = useDispatch();
+
+  // const handleProductDetails = (category) => {
+  //   console.log("category======================", category);
+  //   dispatch(selectCategory(category));
+  //   router.push(`/productDetails`);
+  // };
+
   return (
     <Card hoverable style={{ width: "100%" }}>
-      <Link href={`/${category}/${_id}`} className="text-black">
+      <Link
+        href={{
+          pathname: `${category}/${_id}`,
+          query: category,
+        }}
+        className="text-black"
+      >
         <Image
           src={image}
           alt={`${productName}`}
@@ -56,5 +74,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-
-ProductCard;

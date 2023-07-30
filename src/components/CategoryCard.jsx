@@ -11,7 +11,7 @@ const CategoryCard = ({ category }) => {
 
   return (
     <div className="flex mb-10 justify-between items-center border shadow-md rounded-md  m-auto p-5 ">
-      <div className="flex gap-5 items-start">
+      <div className="flex gap-2 sm:gap-5 items-start">
         <div className="w-10 h-10">
           <Image
             alt="product image"
@@ -22,12 +22,12 @@ const CategoryCard = ({ category }) => {
           />
         </div>
         <div>
-          <p className="text-[15px] font-semibold text-gray-500">
-            {category.title}{" "}
-            <button className="bg-gray-200 rounded-md border-none text-[12px] ml-2 p-1">
-              Required
-            </button>
-          </p>
+          <div className="text-[15px] flex flex-col sm:flex-row gap-2 font-semibold text-gray-500">
+            <span>{category.title}</span>
+            <span className=" rounded-md border-none text-[12px] ml-2 p-1 inline">
+              Required <span className="text-red-600">*</span>
+            </span>
+          </div>
           {categoryProduct && (
             <div>
               <div className="w-10 h-10 ">
@@ -56,7 +56,7 @@ const CategoryCard = ({ category }) => {
       ) : (
         <Link
           href={`/pc_builder/${category?.category}`}
-          className="text-[14px] font-semibold text-whtie px-5 py-3 rounded-lg bg-gray-700 text-white"
+          className="text-[14px] font-semibold text-whtie px-3 py-2 sm:px-5 sm:py-3 rounded-lg bg-gray-700 text-white"
         >
           Choose
         </Link>

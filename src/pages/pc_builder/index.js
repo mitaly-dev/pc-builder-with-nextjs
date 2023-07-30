@@ -18,7 +18,7 @@ const PC_Builder = ({ categories }) => {
       <div className="flex justify-end">
         <button
           onClick={completePCBuildHandle}
-          className={`px-5 py-4 rounded-lg text-[16px] font-semibold text-white border-none  ${
+          className={`px-3 py-3 sm:px-5 sm:py-4  rounded-lg text-[13px] sm:text-[16px] font-semibold text-white border-none  ${
             allCategory.includes(
               "Motherboard" &&
                 "CPU/Processor" &&
@@ -54,14 +54,3 @@ export const getServerSideProps = async () => {
     },
   };
 };
-
-// export const getStaticProps = async () => {
-//   const res = await fetch("http://localhost:3000/api/categories");
-//   const categoriesData = await res.json();
-
-//   return {
-//     props: {
-//       categories: categoriesData.data,
-//     },
-//   };
-// };
