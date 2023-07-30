@@ -1,4 +1,4 @@
-##TN TECH
+## TN TECH
 ## Live Link:
 https://pc-builder-omega-ten.vercel.app/
 
