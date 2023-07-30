@@ -1,4 +1,3 @@
-import { Card } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,28 +11,22 @@ const Categories = ({ categories }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
         {categories?.map((category, index) => {
           return (
-            <Card
+            <Link
               key={index}
-              hoverable
-              style={{ width: "100%" }}
-              className="shadow-lg rounded-md py-5 bg-white hover:bg-[#0d053b] duration-500 text-center group "
+              href={`${category?.category}`}
+              className="text-gray-700 font-semibold hover:text-white flex flex-col shadow-lg rounded-md py-7 bg-white hover:bg-[#0d053b] duration-500 text-center"
             >
-              <Link
-                href={`${category?.category}`}
-                className="text-gray-700 font-semibold group-hover:text-white flex flex-col"
-              >
-                <div>
-                  <Image
-                    src={category.icon}
-                    width={50}
-                    height={50}
-                    alt="image"
-                    className="rounded-lg"
-                  ></Image>
-                </div>
-                {category?.title}
-              </Link>
-            </Card>
+              <div>
+                <Image
+                  src={category.icon}
+                  width={50}
+                  height={50}
+                  alt="image"
+                  className="rounded-lg"
+                ></Image>
+              </div>
+              {category?.title}
+            </Link>
           );
         })}
       </div>
