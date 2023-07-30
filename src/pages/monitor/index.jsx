@@ -1,5 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import RootLayout from "@/components/layout/RootLayout";
 
 const Monitor = ({ monitor }) => {
   return (
@@ -15,10 +14,6 @@ const Monitor = ({ monitor }) => {
 };
 
 export default Monitor;
-
-// Monitor.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

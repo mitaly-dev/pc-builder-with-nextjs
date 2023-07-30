@@ -18,7 +18,6 @@ async function connectToDB(req, res) {
     await client.connect();
     return client;
   } finally {
-    // await client.close();
   }
 }
 export default connectToDB;

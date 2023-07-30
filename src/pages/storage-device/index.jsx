@@ -1,5 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import RootLayout from "@/components/layout/RootLayout";
 
 const StorageDevice = ({ storage_device }) => {
   return (
@@ -15,10 +14,6 @@ const StorageDevice = ({ storage_device }) => {
 };
 
 export default StorageDevice;
-
-// StorageDevice.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

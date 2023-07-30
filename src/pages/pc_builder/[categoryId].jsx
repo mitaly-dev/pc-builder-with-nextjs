@@ -21,8 +21,6 @@ export const getServerSideProps = async (context) => {
   );
   const data = await res.json();
 
-  console.log("data", data.data);
-
   return {
     props: {
       category: data.data,

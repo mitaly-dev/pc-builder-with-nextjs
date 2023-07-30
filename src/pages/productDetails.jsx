@@ -3,11 +3,7 @@ import { Card } from "antd";
 import Image from "next/image";
 import React from "react";
 
-import { useSelector } from "react-redux";
-
 const ProductDetails = ({ product }) => {
-  // const { category: categoryTitle } = useSelector((state) => state.pcBuilder);
-
   const {
     image,
     productName,

@@ -1,7 +1,6 @@
 import ProductDetails from "../productDetails";
 
 const CpuProcessorId = ({ product }) => {
-  console.log("product", product);
   return (
     <div>
       <ProductDetails product={product} />

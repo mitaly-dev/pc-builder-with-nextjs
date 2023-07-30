@@ -1,13 +1,9 @@
-import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
-import Image from "next/image";
+import { Button, theme } from "antd";
 import Link from "next/link";
-import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import { DownOutlined, LaptopOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
-import { useSession, signOut, SessionProvider } from "next-auth/react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSession, signOut } from "next-auth/react";
 import Head from "next/head";
-
-const { Header, Content, Footer } = Layout;
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -40,17 +36,6 @@ const Navbar = () => {
       key: "6",
       label: <Link href="/monitor">Monitor</Link>,
     },
-    // {
-    //   key: "7",
-    //   label: (
-    //     <Link
-    //       href="/pc_builder"
-    //       className="bg-blue-800 px-2 sm:px-3 py-3 rounded-md text-white font-semibold"
-    //     >
-    //       PC Builder
-    //     </Link>
-    //   ),
-    // },
   ];
 
   return (
@@ -66,8 +51,12 @@ const Navbar = () => {
         <title>TN Tech</title>
       </Head>
       <div className="flex justify-between w-full items-center">
-        <Link href="/" className="text-red-600 border border-white text-2xl">
+        <Link
+          href="/"
+          className="text-red-600 border border-white text-2xl flex gap-3 items-center "
+        >
           TN Tech
+          <LaptopOutlined className="hidden sm:block" />
         </Link>
         <div className="flex gap-2 sm:gap-4 items-center">
           <Dropdown

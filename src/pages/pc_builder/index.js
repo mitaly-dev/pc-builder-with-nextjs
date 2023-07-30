@@ -1,5 +1,4 @@
 import CategoryCard from "@/components/CategoryCard";
-import { data } from "autoprefixer";
 import { useSelector } from "react-redux";
 
 const PC_Builder = ({ categories }) => {
@@ -17,7 +16,16 @@ const PC_Builder = ({ categories }) => {
 
       <div className="flex justify-end">
         <button
-          onClick={completePCBuildHandle}
+          onClick={() =>
+            allCategory.includes(
+              "Motherboard" &&
+                "CPU/Processor" &&
+                "Ram" &&
+                "Monitor" &&
+                "Storage Device" &&
+                "Power Supply Unit"
+            ) && completePCBuildHandle()
+          }
           className={`px-3 py-3 sm:px-5 sm:py-4  rounded-lg text-[13px] sm:text-[16px] font-semibold text-white border-none  ${
             allCategory.includes(
               "Motherboard" &&
@@ -39,10 +47,6 @@ const PC_Builder = ({ categories }) => {
 };
 
 export default PC_Builder;
-
-// PC_Builder.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
 
 export const getServerSideProps = async () => {
   const res = await fetch("http://localhost:3000/api/categories");

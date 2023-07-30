@@ -1,5 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import RootLayout from "@/components/layout/RootLayout";
 
 const CpuProcessor = ({ cpuProcessor }) => {
   return (
@@ -15,10 +14,6 @@ const CpuProcessor = ({ cpuProcessor }) => {
 };
 
 export default CpuProcessor;
-
-// CpuProcessor.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

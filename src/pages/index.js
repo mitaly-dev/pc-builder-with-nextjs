@@ -1,8 +1,8 @@
 import Banner from "@/components/Banner";
-import RootLayout from "@/components/layout/RootLayout";
 import Categories from "./categories";
 import FeaturedProduct from "./featuredProduct";
 import { useSession } from "next-auth/react";
+import Footer from "@/components/Footer";
 
 const Home = ({ categories, featured }) => {
   const { data: session } = useSession();
@@ -12,15 +12,12 @@ const Home = ({ categories, featured }) => {
       <Banner />
       <FeaturedProduct featured={featured} />
       <Categories categories={categories} />
+      <Footer />
     </div>
   );
 };
 
 export default Home;
-
-// Home.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
 
 export const getStaticProps = async () => {
   const res1 = await fetch("http://localhost:3000/api/categories");

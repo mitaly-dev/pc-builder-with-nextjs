@@ -1,7 +1,6 @@
 import ProductDetails from "../productDetails";
 
 const MotherboardId = ({ product }) => {
-  console.log("product", product);
   return (
     <div>
       <ProductDetails product={product} />

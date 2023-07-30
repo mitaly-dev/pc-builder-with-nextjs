@@ -1,4 +1,3 @@
-import { selectCategory } from "@/redux/pcBuilderSlice";
 import { StarTwoTone } from "@ant-design/icons";
 import { Card } from "antd";
 import Image from "next/image";
@@ -24,12 +23,6 @@ const ProductCard = ({ product }) => {
   } = product;
   const router = useRouter();
   const dispatch = useDispatch();
-
-  // const handleProductDetails = (category) => {
-  //   console.log("category======================", category);
-  //   dispatch(selectCategory(category));
-  //   router.push(`/productDetails`);
-  // };
 
   return (
     <Card hoverable style={{ width: "100%" }}>

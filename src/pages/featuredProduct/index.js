@@ -1,6 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import RootLayout from "@/components/layout/RootLayout";
-import { useSession } from "next-auth/react";
 import React from "react";
 
 const FeaturedProduct = ({ featured }) => {
@@ -20,17 +18,3 @@ const FeaturedProduct = ({ featured }) => {
 };
 
 export default FeaturedProduct;
-// FeaturedProduct.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
-
-// export const getStaticProps = async () => {
-//   const res = await fetch("http://localhost:3000/api/featured");
-//   const data = await res.json();
-//   console.log("data fetature", data);
-//   return {
-//     props: {
-//       featured: data.data,
-//     },
-//   };
-// };

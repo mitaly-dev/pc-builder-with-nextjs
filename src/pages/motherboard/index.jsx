@@ -1,5 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import RootLayout from "@/components/layout/RootLayout";
 
 const Motherboard = ({ motherboard }) => {
   return (
@@ -15,10 +14,6 @@ const Motherboard = ({ motherboard }) => {
 };
 
 export default Motherboard;
-
-// Motherboard.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
 
 export const getStaticProps = async () => {
   const res = await fetch(

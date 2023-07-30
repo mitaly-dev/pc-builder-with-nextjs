@@ -1,5 +1,4 @@
 import ProductCard from "@/components/ProductCard";
-import RootLayout from "@/components/layout/RootLayout";
 
 const PowerSupplyUnit = ({ power_supply_unit }) => {
   return (
@@ -15,10 +14,6 @@ const PowerSupplyUnit = ({ power_supply_unit }) => {
 };
 
 export default PowerSupplyUnit;
-
-// PowerSupplyUnit.getLayout = function getLayout(page) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
 
 export const getStaticProps = async () => {
   const res = await fetch(
